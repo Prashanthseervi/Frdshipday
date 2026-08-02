@@ -158,6 +158,7 @@ gift.onclick = () => {
     setTimeout(()=>{
 
         videoBox.style.display="flex";
+        confetti();
 
         video.play();
 
