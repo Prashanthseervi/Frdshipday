@@ -349,3 +349,30 @@ font-size:35px;
 background:white;
 box-shadow:0 5px 15px rgba(0,0,0,.25);
 }
+#messageBox{
+position:fixed;
+top:80px;
+left:50%;
+transform:translateX(-50%);
+background:rgba(255,255,255,.9);
+padding:15px 30px;
+border-radius:40px;
+font-size:24px;
+font-weight:bold;
+display:none;
+z-index:9999;
+color:#ff4081;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
+animation:pop .4s;
+}
+
+@keyframes pop{
+0%{
+transform:translateX(-50%) scale(.5);
+opacity:0;
+}
+100%{
+transform:translateX(-50%) scale(1);
+opacity:1;
+}
+}
