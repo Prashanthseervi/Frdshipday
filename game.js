@@ -6,6 +6,7 @@ const game = document.getElementById("game");
 
 const player = document.getElementById("player");
 const world = document.getElementById("world");
+player.innerHTML = '<img src="roblox-character.PNG" width="60">';
 
 const hearts = document.querySelectorAll(".heart");
 const messageBox=document.getElementById("messageBox");
