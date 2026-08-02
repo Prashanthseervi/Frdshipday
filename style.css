@@ -97,15 +97,14 @@ background:#4CAF50;
 /* Player */
 
 #player{
-position:absolute;
-bottom:150px;
-left:100px;
-width:70px;
-height:90px;
-background:#ff9800;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.3);
-transition:left .05s;
+    position:absolute;
+    bottom:150px;
+    left:100px;
+    width:70px;
+    height:90px;
+    object-fit:contain;
+    background:none;
+    transition:left .05s;
 }
 
 /* Hearts */
