@@ -291,3 +291,29 @@ jumping=false;
 },300);
 
 }
+const music=document.getElementById("bgMusic");
+const musicBtn=document.getElementById("musicBtn");
+
+let playing=false;
+
+musicBtn.onclick=()=>{
+
+if(!playing){
+
+music.play();
+
+musicBtn.innerHTML="🔊";
+
+playing=true;
+
+}else{
+
+music.pause();
+
+musicBtn.innerHTML="🎵";
+
+playing=false;
+
+}
+
+};
