@@ -8,6 +8,7 @@ const player = document.getElementById("player");
 const world = document.getElementById("world");
 
 const hearts = document.querySelectorAll(".heart");
+const messageBox=document.getElementById("messageBox");
 const scoreText = document.getElementById("score");
 
 const gift = document.getElementById("gift");
@@ -103,6 +104,26 @@ function checkHearts() {
                 heart.dataset.done = true;
 
                 score++;
+                const msgs=[
+"💖 Best Friends Forever!",
+"🌸 Keep Going Mithli!",
+"🎉 You're Amazing!",
+"❤️ Love from Prashanth & Riddhi",
+"✨ Almost There!",
+"🥳 You're Doing Great!",
+"💝 Surprise Awaits!",
+"🌈 Keep Smiling!",
+"🎁 One More Step!",
+"🎂 The Gift Is Waiting!"
+];
+
+messageBox.innerHTML=msgs[Math.min(score-1,msgs.length-1)];
+
+messageBox.style.display="block";
+
+setTimeout(()=>{
+messageBox.style.display="none";
+},1800);
 
                 scoreText.innerText = score;
 
