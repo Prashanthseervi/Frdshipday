@@ -14,6 +14,7 @@ const gift = document.getElementById("gift");
 
 const videoBox = document.getElementById("videoBox");
 const video = document.getElementById("surpriseVideo");
+let jumping = false;
 
 let playerX = 100;
 let score = 0;
@@ -244,5 +245,28 @@ c.remove();
 },4000);
 
 }
+
+}
+document.getElementById("jump").onclick = ()=>{
+
+if(jumping) return;
+
+jumping=true;
+
+player.style.transition="bottom .3s";
+
+player.style.bottom="270px";
+
+setTimeout(()=>{
+
+player.style.bottom="150px";
+
+setTimeout(()=>{
+
+jumping=false;
+
+},300);
+
+},300);
 
 }
