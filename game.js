@@ -181,6 +181,13 @@ gift.onclick = () => {
 
         videoBox.style.display="flex";
         confetti();
+        for(let i=0;i<8;i++){
+
+setTimeout(()=>{
+fireworks();
+},i*250);
+
+}
 
         video.play();
 
