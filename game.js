@@ -127,24 +127,98 @@ function checkGift() {
 
 gift.onclick = () => {
 
-    if (playerX > 4450) {
+    if(playerX < 4450){
+        alert("🏃 Run to the end first!");
+        return;
+    }
 
-        videoBox.style.display = "flex";
+    gift.classList.add("open");
 
-        video.play();
+    // Fireworks
+    for(let i=0;i<40;i++){
 
-    } else {
+        let fire=document.createElement("div");
 
-        alert("Reach the gift first! ❤️");
+        fire.className="firework";
+
+        fire.innerHTML=["🎆","✨","🎉","💖","🎊"][Math.floor(Math.random()*5)];
+
+        fire.style.left=Math.random()*100+"vw";
+
+        fire.style.top=Math.random()*80+"vh";
+
+        document.body.appendChild(fire);
+
+        setTimeout(()=>{
+            fire.remove();
+        },1200);
 
     }
 
-};
+    setTimeout(()=>{
+
+        videoBox.style.display="flex";
+
+        video.play();
+
+    },1200);
+
+}
 
 // Close after video
+video.onended=()=>{
 
-video.onended = () => {
+videoBox.innerHTML=`
 
-    alert("🎉 Happy Friendship Day Mithli ❤️\n\nLove,\nPrashanth & Riddhi");
+<div style="
 
-};
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+height:100%;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+">
+
+<h1 style="font-size:70px;">❤️ Happy Friendship Day ❤️</h1>
+
+<h2>Dear Mithli</h2>
+
+<p style="font-size:28px;max-width:800px;line-height:1.8;">
+
+Thank you for always being there,
+for every laugh,
+every memory,
+and every moment.
+
+You are one of the most precious people in our lives.
+
+We hope this little surprise made you smile.
+
+</p>
+
+<h2 style="margin-top:40px;">
+
+With Lots of Love ❤️
+
+<br><br>
+
+Prashanth & Riddhi
+
+</h2>
+
+</div>
+
+`;
+
+}
