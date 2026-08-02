@@ -222,3 +222,26 @@ Prashanth & Riddhi
 `;
 
 }
+function confetti(){
+
+for(let i=0;i<150;i++){
+
+const c=document.createElement("div");
+
+c.className="confetti";
+
+c.innerHTML=["🎊","🎉","✨","💖","❤️"][Math.floor(Math.random()*5)];
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.animationDuration=(2+Math.random()*2)+"s";
+
+document.body.appendChild(c);
+
+setTimeout(()=>{
+c.remove();
+},4000);
+
+}
+
+}
